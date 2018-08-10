@@ -24,6 +24,7 @@ dependencies:
 - text
 - yaml
 - aeson
+- optparse-applicative
 
 library:
   source-dirs: src
