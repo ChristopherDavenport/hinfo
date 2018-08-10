@@ -1,5 +1,5 @@
 name:                hinfo
-version:             0.1.0.0
+version:             0.0.1.0
 github:              "ChristopherDavenport/hinfo"
 license:             BSD3
 author:              "Christopher Davenport"
@@ -23,18 +23,20 @@ dependencies:
 - base >= 4.7 && < 5
 - text
 - yaml
+- aeson
 
 library:
   source-dirs: src
 
 executables:
-  hinfo-exe:
+  hinfo:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
+    - -optP-Wno-nonportable-include-path
     dependencies:
     - hinfo
 

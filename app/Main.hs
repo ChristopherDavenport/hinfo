@@ -1,6 +1,8 @@
 module Main where
 
-import Lib
+import Hinfo.Hpack
 
 main :: IO ()
-main = someFunc
+main = do
+  app <- loadDefault
+  print app
