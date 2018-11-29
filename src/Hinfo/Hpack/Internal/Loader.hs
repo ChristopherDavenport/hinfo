@@ -1,9 +1,9 @@
 module Hinfo.Hpack.Internal.Loader where
 
-import Hinfo.Hpack.Internal.Types
-import Data.Yaml
+import Hinfo.Hpack.Internal.Types   (PackageFile)
+import Data.Yaml                    (decodeFileThrow)
 
-import Control.Monad.IO.Class (MonadIO)
+import Control.Monad.IO.Class       (MonadIO)
 
 
 loadDefault :: MonadIO m => m PackageFile
